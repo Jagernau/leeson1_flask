@@ -35,9 +35,9 @@ def page_skills(y):
     y = str(y)
     by_skill = ""
     for i in names:
-        if y in i["skills"].split(","):
+        if y in i["skills"].split(", "):
             by_skill += f"\nИмя - {i['name']}\nПозиция - {i['position']}\nНавыки - {i['skills']}\n\n"
-        if y.title() in i["skills"].split(","):
+        if y.title() in i["skills"].split(", "):
             by_skill += f"\nИмя - {i['name']}\nПозиция - {i['position']}\nНавыки - {i['skills']}\n\n"
         
     return f"<pre >{by_skill}<pre>"
